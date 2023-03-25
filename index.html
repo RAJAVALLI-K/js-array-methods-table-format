@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Methods-Table</title>
+    <style>
+        body {
+            width: 98%;
+        }
+
+        .table,
+        th,
+        td {
+            border: 3px solid rebeccapurple;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>ARRAY OF METHODS</caption>
+        <tr>
+            <th>S.NO</th>
+            <th>METHOD</th>
+            <th>SYNTAX</th>
+            <th>PARAMETERS / INPUT</th>
+            <th>OUTPUT</th>
+            <th>DEFINITION</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>filter()</td>
+            <td>array.filter(callback(element<br>,index,arr),thisValue);</td>
+            <td>
+                1.value=>the current element in the array<br>
+                2.index=>the index of the current element<br>
+                3.array=> the array filter() was called<br>
+                4.thisArgument=>A value to use as this when executing callbackfunction. By default, it is undefined<br>
+                <b>INPUT=></b><br>
+                let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];<br>
+                function checkEven(number) {<br>
+                if (number % 2 == 0){<br>
+                return true;<br>
+                }<br>
+                else{<br>
+                return false;<br>
+                }<br>
+                }<br>
+                let evenNumbers = numbers.filter(checkEven);<br>
+                console.log(evenNumbers);<br>
+            </td>
+            <td>
+                <br>OUTPUT=><b> [ 2, 4, 6, 8, 10 ]</b>
+            </td>
+            <td>Returns array values by filtering elements</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>find()</td>
+            <td>array.find(function(value<br>,index,array),thisValue);</td>
+            <td>
+                1.value=>the current element in the array<br>
+                2.index=>the index of the current element<br>
+                3.array=> the array find() was called<br>
+                4.thisArgument=>A value to use as this when executing callbackfunction. By default, it is undefined<br>
+                <b>INPUT=></b><br>
+                let numbers = [1, 3, 4, 9, 8];<br>
+                function even(element) {<br>
+                return element % 2 == 0;<br>
+                }<br>
+                let evenNumber = numbers.find(even);<br>
+                console.log(evenNumber);<br>
+            </td>
+            <td><br>OUTPUT=><b>4</b></td>
+            <td>Returns first element of array that satisfies a condition</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>findIndex()</td>
+            <td>array.findIndex(function(value,<br>index,array)<br>,thisValue);</td>
+            <td>
+                1.value=>the current element in the array<br>
+                2.index=>the index of the current element<br>
+                3.array=> the array findIndex() was called<br>
+                4.thisArgument=>A value to use as this when executing callbackfunction, By default, it is undefined<br>
+                <b>INPUT=></b><br>
+                let numbers = [1, 3, 4, 9, 8];<br>
+                function even(element) {<br>
+                return element % 2 == 0;<br>
+                }<br>
+                let evenNumber = numbers.findIndex(even);<br>
+                console.log(evenNumber);<br>
+            </td>
+            <td>
+                OUTPUT=><b>2</b>
+            </td>
+            <td>The findIndex() method returns the index (position) of the first element that passes a test.</td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>map()</td>
+            <td>array.map(function(value<br>,index,array)){[thisArgument]};</td>
+            <td>
+                1.value=>the current element in the array<br>
+                2.index=>the index of the current element<br>
+                3.array=> the array map() was called<br>
+                4.thisArgument=>A value to use as this when executing callbackfunction. By default, it is undefined<br>
+                <b>INPUT=></b><br>
+                let numbers = [2, 4, 6, 8, 10];<br>
+                function square(number) {<br>
+                return number * number;<br>
+                },<br>
+                let result=numbers.map(square)<br>
+                console.log(result);
+            </td>
+            <td>
+                <br>OUTPUT=><b> [ 4, 16, 36, 64, 100 ]</b>
+            </td>
+            <td>Return new array value</td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>indexOf()</td>
+            <td>array.indexOf(searchElement<br>,fromIndex);</td>
+            <td>
+                1.searchElement=>element to locate in the array<br>
+                2.fromIndex=>The index to start the search at. By default, it is 0.<br>
+                <b>INPUT=></b><br>
+                let languages = ["Java", "JavaScript", "Python", "JavaScript"];<br>
+                let index = languages.indexOf("JavaScript");<br>
+                console.log(index);<br>
+                <br>
+            </td>
+            <td><br>OUTPUT=><b>1</b></td>
+            <td>Returns the first index of occurrence of element</td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>findLastIndex()</td>
+            <td>array.findLastIndex(function(value,<br>index,array)<br>,thisValue);</td>
+            <td>
+                1.value=>the current element in the array<br>
+                2.index=>the index of the current element<br>
+                3.array=> the array findLastIndex() was called<br>
+                4.thisArgument=>Value to use as this when executing callback. By default, it is undefined.
+                <br>
+                INPUT=><br>
+                let numbers = [1, 3, 4, 9, 8];<br>
+                function square(number) {<br>
+                    return number * number;<br>
+                }<br>
+                let index = numbers.findLastIndex(square);<br>
+                console.log(index);
+            </td>
+            <td><br>OUTPUT=><b>4</b></td>
+            <td>returns the array last index position value</td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>push()</td>
+            <td>array.push(any element);</td>
+            <td>
+                1.arugument value=>inserts the argument value to the end of array.<br>
+                <b>INPUT=></b><br>
+                let marks = [90, 20, 30, 50];<br>
+                marks.push(20, 70, 90);<br>
+                console.log(marks);<br>
+            </td>
+            <td>
+                <br>OUTPUT=><b>[90,20,30,50,20,70,90]</b>
+            </td>
+            <td>Adds an element to the end of the array</td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>pop()</td>
+            <td>array.pop();</td>
+            <td>
+                1.arugument value=>Remove the value to end of the array.<br>
+                <b>INPUT=></b><br>
+                let marks = [90, 20, 30, 50];<br>
+                marks.pop();<br>
+                console.log(marks);<br>
+            </td>
+            <td>
+                <br>OUTPUT=><b>[90,20,30]</b>
+            </td>
+            <td>Removes the last element of the array</td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>shift()</td>
+            <td>array.shift();</td>
+            <td>
+                1.arugument value=>Remove the value to first of the array.<br>
+                <b>INPUT=></b><br>
+                let marks = [90, 20, 30, 50];<br>
+                marks.shift();<br>
+                console.log(marks);<br>
+
+            </td>
+            <td>
+
+                <br>OUTPUT=><b>[20,30,50]</b>
+            </td>
+            <td>Removes the first element of the array</td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>unshift()</td>
+            <td>array.unshift(any element);</td>
+            <td>
+                1.arugument value=>inserts the argument value to the first of array.<br>
+                <b>INPUT=></b><br>
+                let marks = [90, 20, 30, 50];<br>
+                marks.unshift(20, 70);<br>
+                console.log(marks);<br>
+            </td>
+            <td>
+                <br>OUTPUT=><b>[20, 70,90, 20, 30, 50]</b>
+            </td>
+            <td>Add the first element of the array</td>
+        </tr>
+        <tr>
+            <td>11.</td>
+            <td>reduce()</td>
+            <td>array.reduce(function(accumulate,<br>currValue,curIndex,array),initialvalue);</td>
+            <td>
+                1.accumulate=>0th position of array value<br>
+                2.currValue=>1th position of array value<br>
+                3.curIndex=>the index position of currentValue in array.<br>
+                4.array=>the arra reduce()was called.<br>
+                5.initialvalue=>user assumes the values<br>
+                <b>INPUT=></b><br>
+                const numbers = [1, 2, 3, 4, 5];<br>
+                const sum = numbers.reduce(function (accumulator, currentValue) {<br>
+                return accumulator + currentValue * 2;<br>
+                }, 10);<br>
+                console.log(sum);
+            </td>
+            <td>
+                <br>OUTPUT=><b>40</b>
+            </td>
+            <td>The reduce() method executes a reducer function for array element. The reduce() method returns a single
+                value: the function's accumulated result.</td>
+        </tr>
+        <tr>
+            <td>12.</td>
+            <td>reverse()</td>
+            <td>array.reverse();</td>
+            <td>
+                1.arugument value=>Return value ==>reverse the array values end to start.<br>
+                <b>INPUT=></b><br>
+                let arrayValues = [1, 2, -3, 4, 5, 6];<br>
+                console.log(arrayValues.reverse());<br>
+            </td>
+            <td>
+                <br>OUTPUT=><b>[6,5,4,-3,2,1]</b><br>
+            </td>
+            <td>Returns the array index values in reverse order.</td>
+        </tr>
+        <tr>
+            <td>13.</td>
+            <td>slice()</td>
+            <td>array.slice(startIndex,endIndex);</td>
+            <td>
+                1.startIndex=> Starting index of the selection. If not provided, the selection starts at start 0.<br>
+                2.endIndex=>Ending index of the selection (exclusive). If not provided, the selection ends at the index
+                of the last element.<br>
+                <b>INPUT=></b><br>
+                let array =[10,13,56,54,76];<br>
+                let result=array.slice(1,3);<br>
+                console.log(result);<br>
+            </td>
+            <td>
+
+                <br>OUTPUT=><b>[13,56]</b>
+            </td>
+            <td>Return the array element slice the index value</td>
+        </tr>
+        <tr>
+            <td>14.</td>
+            <td>splice()</td>
+            <td>1.array.splice(startIndex,endIndex);<br>
+                2.array.splice(startIndex,deletecount);<br>
+                3.array.splice(startIndex<br>,deletecount,endIndex);<br>
+            </td>
+            <td>
+                1.startIndex=> The index from where the array is changed.<br>
+                2.deletecount=>The number of items to remove from start<br>
+                3.endIndex=> The elements to add to the start index. If not specified, splice() will only remove
+                elements from the array.<br>
+                <b>INPUT=></b><br>
+                let array=['abx','apple','circket','ijklm'],<br>
+                result=array.splice(2,1,"raji","valli");<br>
+                console.log(result);<br>
+            </td>
+            <td>
+                <br>OUTPUT=><b>circket</b>
+            </td>
+            <td>To add or remove elements from an array-splice</td>
+        </tr>
+        <tr>
+            <td>15.</td>
+            <td>toString()</td>
+            <td>array.toString();</td>
+            <td>
+                1.The toString() method does not take any parameters.<br>
+                <b>INPUT=></b><br>
+                let nameStr="Rajavalli BCA";<br>
+                let result=nameStr.toString();<br>
+                console.log(result);<br>
+            </td>
+            <td>
+
+                <br>OUTPUT=><b>Rajavalli BCA</b>
+            </td>
+            <td>Returns the string representation of an array</td>
+        </tr>
+        <tr>
+            <td>16.</td>
+            <td>toLocaleString()</td>
+            <td>array.toLocaleString(locals,option);</td>
+            <td>
+                1.local=>A convention or formatting based on particular geography<br>
+                2.option=>An object with configuration properties<br>
+                <b>INPUT=></b><br>
+                let dateTime=new Date();<br>
+                let result=dateTime.toLocaleString();<br>
+                console.log(result);<br>
+            </td>
+            <td>
+                <br>OUTPUT=><b>16/03/2023, 8:39:40 am</b>
+            </td>
+            <td>Returns string representing the elements of array</td>
+        </tr>
+    </table>
+</body>
+
+</html>
